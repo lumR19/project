@@ -307,9 +307,9 @@ if [ "$delivery_or_pickup_choice" = "1" ]; then
     if [ "$payment_method" = "1" ] || [ "$payment_method" = "3" ]; then
         echo "Thank you, the delivery representative will contact you to deliver it to your door."
     else
-        echo "Your order will be ready for pickup on $pickup_date."
+        echo "Your order will be ready for pickup on $delivery_date $pickup_date."
        
     fi
 else
-    echo "Your order will be ready for pickup on $pickup_date."
+    echo "Your order will be ready for pickup on $delivery_date $pickup_date."
 fi
