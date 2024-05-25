@@ -215,7 +215,7 @@ done
 done
 
             echo "Payment successful!"
-            break
+            
            
             read -p "Do you want to save this card on our website? (y/n) " save_card
             if [ "$save_card" = "y" ]; then
