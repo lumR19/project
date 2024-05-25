@@ -267,8 +267,14 @@ echo "Order Number: $order_number"
 echo "Name: $name"
 echo "Phone: $phone_number"
 echo "Location: $location"
-echo "Delivery/Pickup: $delivery_or_pickup"
-if [ "$delivery_or_pickup" = "delivery" ]; then
+
+if [ "$delivery_or_pickup_choice" == "1" ]; then
+    echo "Delivery/Pickup: Delivery"
+else
+    echo "Delivery/Pickup: Pickup"
+fi
+
+if [ "$delivery_or_pickup_choice" = "1" ]; then
     echo "Delivery Date: $delivery_date"
 else
     echo "Pickup Date: $pickup_date"
@@ -302,6 +308,7 @@ if [ "$delivery_or_pickup_choice" = "1" ]; then
         echo "Thank you, the delivery representative will contact you to deliver it to your door."
     else
         echo "Your order will be ready for pickup on $pickup_date."
+       
     fi
 else
     echo "Your order will be ready for pickup on $pickup_date."
